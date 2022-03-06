@@ -3,6 +3,7 @@ const controller = require('../controller/user');
 
 const app = express();
 
+app.get('/',(req,res)=>{})
 app.get('/health', controller.getHealth)
 app.get('/profile', controller.getProfile)
 app.post('/verification', controller.verification)
