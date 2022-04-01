@@ -1,11 +1,9 @@
 const bcrypt = require('bcrypt');
 
 const getHealth = (req,res) => {
-    console.log("health request recieved");
     res.send('Profile Service - Health Verified');
 }
 const getProfile = (req,res) => {
-    console.log("profile request recieved");
     res.send(JSON.stringify(
         {
             first_name: "first_name",
@@ -22,16 +20,13 @@ const getProfile = (req,res) => {
             website: "Portfolio_Website",
         }
     ));
-    console.log("responded with profile details");
 }
-const verification = (req,res) => {
-    console.log("Verification request recieved");
+const verification = async (req,res) => {
     const cryptingToken = req.body.salt;
-    const hash = bcrypt.hashSync("ABCDEF",cryptingToken);
+    const hash = await bcrypt.hash("p4AAU2A0sYCPm6AcftAp",cryptingToken);
     res.send( JSON.stringify({
         hash: hash
     }));
-    console.log(`Responded with hash = ${hash}`);
 }
 
 module.exports = {
