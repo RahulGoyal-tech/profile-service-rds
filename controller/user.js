@@ -6,8 +6,8 @@ const getHealth = (req,res) => {
 const getProfile = (req,res) => {
     res.send(JSON.stringify(
         {
-            first_name: "Rahul",
-            last_name: "Goyal",
+            first_name: "Lakshay",
+            last_name: "Manchanda",
             email: "rhgoyal01@gmail.com",
             phone: "9540717412",
             yoe: 0,
