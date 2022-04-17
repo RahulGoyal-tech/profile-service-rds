@@ -6,24 +6,24 @@ const getHealth = (req,res) => {
 const getProfile = (req,res) => {
     res.send(JSON.stringify(
         {
-            first_name: "Lakshay",
-            last_name: "Manchanda",
-            email: "manchanda@lakshay.com",
-            phone: "9999999999",
-            yoe: 1,
-            company: "YUDEK",
-            designation: "SDE Intern",
-            github_id: "lakshayman",
-            linkedin_id: "lakshayman",
+            first_name: "Rahul",
+            last_name: "Goyal",
+            email: "rhgoyal01@gmail.com",
+            phone: "9540717412",
+            yoe: 0,
+            company: "Bharati Vidyapeeth college of engineering",
+            designation: "Student",
+            github_id: "RahulGoyal-tech",
+            linkedin_id: "rahul-goyal-69a9801b1",
             twitter_id: "",
             instagram_id: "",
-            website: "lakshaymanchanda.me",
+            website: "",
         }
     ));
 }
 const verification = async (req,res) => {
     const cryptingToken = req.body.salt;
-    const hash = await bcrypt.hash("19klSc2SCGtWDopbaVoj",cryptingToken);
+    const hash = await bcrypt.hash("UbTkVojl0cEWIf6AoOyQ",cryptingToken);
     res.send( JSON.stringify({
         hash: hash
     }));
