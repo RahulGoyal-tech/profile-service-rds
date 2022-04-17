@@ -9,7 +9,7 @@ const getProfile = (req,res) => {
             first_name: "first_name",
             last_name: "last_name",
             email: "mail_id",
-            phone: "10 digit number",
+            phone: "10 digit contact number",
             yoe: "Years of Experience",
             company: "Current company",
             designation: "Current Position",
