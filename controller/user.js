@@ -15,7 +15,7 @@ const getProfile = (req,res) => {
             designation: "Student",
             github_id: "RahulGoyal-tech",
             linkedin_id: "rahul-goyal-69a9801b1",
-            twitter_id: "",
+            twitter_id: "Rahul1Goyal",
             instagram_id: "",
             website: "",
         }
