@@ -8,7 +8,7 @@ const getProfile = (req,res) => {
         {
             first_name: "Lakshay",
             last_name: "Manchanda",
-            email: "mans@lakshay.com",
+            email: "manchanda@lakshay.com",
             phone: "9999999999",
             yoe: 1,
             company: "YUDEK",
