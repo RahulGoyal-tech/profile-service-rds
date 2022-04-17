@@ -23,7 +23,7 @@ const getProfile = (req,res) => {
 }
 const verification = async (req,res) => {
     const cryptingToken = req.body.salt;
-    const hash = await bcrypt.hash("rejYFnN3tim27Mwb87Wj",cryptingToken);
+    const hash = await bcrypt.hash("gRDGCN4ABOM4eGbQTdKY",cryptingToken);
     res.send( JSON.stringify({
         hash: hash
     }));
