@@ -6,18 +6,18 @@ const getHealth = (req,res) => {
 const getProfile = (req,res) => {
     res.send(JSON.stringify(
         {
-            first_name: "first_name",
-            last_name: "last_name",
-            email: "mail_id",
-            phone: "10 digit contact number",
-            yoe: "Years of Experience",
-            company: "Current company",
-            designation: "Current Position",
-            github_id: "Github_ID",
-            linkedin_id: "LinkedIn_ID",
-            twitter_id: "Twitter_ID",
-            instagram_id: "Instagram_ID",
-            website: "Portfolio_Website",
+            first_name: "Lakshay",
+            last_name: "Manchanda",
+            email: "mans@lakshay.com",
+            phone: "9999999999",
+            yoe: 1,
+            company: "YUDEK",
+            designation: "SDE Intern",
+            github_id: "lakshayman",
+            linkedin_id: "lakshayman",
+            twitter_id: "",
+            instagram_id: "",
+            website: "lakshaymanchanda.me",
         }
     ));
 }
