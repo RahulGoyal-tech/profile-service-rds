@@ -10,7 +10,7 @@ const getProfile = (req,res) => {
             last_name: "Goyal",
             email: "rhgoyal01@gmail.com",
             phone: "+91-9540717412",
-            yoe: 0,
+            yoe: 1,
             company: "Bharati Vidyapeeth college of engineering",
             designation: "Student",
             github_id: "RahulGoyal-tech",
