@@ -73,5 +73,35 @@ describe("Profile Service", function () {
                 return done();
             });
         });
+        it("should return 404 if salt not sent", function(done) {
+            chai
+            .request(app)
+            .post('/verification')
+            .send()
+            .end((err,res) => {
+                if (err) {
+                    throw done(err);
+                }
+                expect(res.status).to.equal(404);
+                expect(res.text).to.equal("Salt not found");
+
+                return done();
+            });
+        });
+        it("should return 500 if invalid salt is recieved", function(done) {
+            chai
+            .request(app)
+            .post('/verification')
+            .send({salt: "invalidSalt"})
+            .end((err,res) => {
+                if (err) {
+                    throw done(err);
+                }
+                expect(res.status).to.equal(500);
+                expect(res.text).to.equal("Error while encryption");
+
+                return done();
+            });
+        });
     });
 });
