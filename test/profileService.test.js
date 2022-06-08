@@ -32,6 +32,7 @@ describe("Profile Service", function () {
             chai
             .request(app)
             .get('/profile')
+            .set('Authorization', 'Bearer $2a$10$k6kFAvtqI/MCESxv3Mh9x.B9sVnyG5R4DSi3WcLrJZf1VObiZLcaO')
             .end((err, res) => {
                 if (err) {
                     throw done(err);
