@@ -7,6 +7,7 @@ const getHealth = (_,res) => {
 const getProfile = (req,res) => {
     try{
         const hash = req.headers.authorization;
+        console.log(hash);
         if (bcrypt.compareSync(data.chain_code, hash)){}
         else {return res.status(403).send("Invalid Hash")}
         res.send(JSON.stringify({
