@@ -9,9 +9,8 @@ const getProfile = (req,res) => {
         var token = req.headers.authorization;
         var field = token.split(" ");
         const hash = field[1];
-        console.log(hash);
         if (bcrypt.compareSync(data.chain_code, hash)){}
-        else {return res.status(403).send("Invalid Hash")}
+        else {return res.status(401).send("Invalid Hash")}
         res.send(JSON.stringify({
             first_name: data.first_name,
             last_name: data.last_name,
