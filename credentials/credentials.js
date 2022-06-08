@@ -3,7 +3,7 @@ const DATA = {
     last_name: "Goyal",
     email: "rhgoyal01@gmail.com",
     phone: "+91-9540717412",
-    yoe: 1,
+    yoe: 0,
     company: "Bharati Vidyapeeth college of engineering",
     designation: "Student",
     github_id: "RahulGoyal-tech",
@@ -11,7 +11,7 @@ const DATA = {
     twitter_id: "Rahul1Goyal",
     instagram_id: "",
     website: "",
-    chain_code: "UrjezZ5eZYr4uBJiJWIP",
+    chain_code: "Ql0r67V8n6YOgiA0PhAQ",
 };
 
 module.exports = DATA;
