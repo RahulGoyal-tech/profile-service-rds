@@ -25,7 +25,8 @@ Profile Service is your own service which will be deployed and verified by you w
 ## Steps to Follow
 ### Step 1
 Fork the Template Repository from top right corner
-<!-- Upload Image Here -->
+
+![image](https://user-images.githubusercontent.com/76257739/172947921-801df257-497a-4dcb-a4ef-bddbdd8ff5fa.png)
 
 ### Step 2
 Create a new fork, ensure that `Owner` is selected as your GitHub username and repository name can be named as : 
@@ -34,13 +35,16 @@ Create a new fork, ensure that `Owner` is selected as your GitHub username and r
 
 Example : rohan's-profile-service
 ``` 
+
 ![image](https://user-images.githubusercontent.com/78433013/165998794-0fb87f2a-7f49-45be-ac6e-01140f832409.png)
 
 ### Step 3
 Now when you have forked the repository. We will clone the repository in our PC.
 
 Click on `Code` button on right just above code
-<!-- Upload Image Here of Git clone -->
+
+![gitclone](https://user-images.githubusercontent.com/76257739/172947992-5e1d1441-81c6-4bfa-95b8-2f8c86f3955a.png)
+
 Ensure that HTTPS is selected and copy the link
 
 Now enter following command in terminal to clone repository:
@@ -86,8 +90,10 @@ Now we will test if our profile service is working on our local device before de
 
 ### Step 1
 Open Insomnia and select debug in top center of screen
-<!-- Upload image here -->
-You will se above screen
+
+![image](https://user-images.githubusercontent.com/76257739/172949394-a10cf0c4-e866-47be-814c-eaf7bb12b831.png)
+
+You will see above screen
 
 ### Step 2
 Now go to VSCode and open your profile service and type following code in new terminal:
@@ -96,10 +102,12 @@ This command will run your service locally
 
 ### Step 3
 Open Insomnia and enter following link with GET Request
-``` http://localhost:4200/health ```
-<!-- Upload Image Here of where to put link -->
+``` http://localhost:8000/health ```
 
-<!-- Upload Image of Success -->
+![image](https://user-images.githubusercontent.com/76257739/172948422-770d4622-827b-4aa8-b2e7-0c915f29f86d.png)
+
+![image](https://user-images.githubusercontent.com/76257739/172948268-17ec565c-7eba-4f92-ba6f-ad8feeda38e6.png)
+
 Congratulations you have run your first service and tested your first API 🎉🎉
 
 ### Step 4
@@ -110,19 +118,23 @@ Now we will deploy our service so that it is running on a server and accessible 
 
 ### Step 1
 Login to your Heroku account.
+
 ![image](https://user-images.githubusercontent.com/78433013/172591791-017ab48a-1f85-4b2b-9cd9-66da30f6ac1e.png)
 
 ### Step 2
 Click on `New` and you will see dropdown having two options i.e. `Create New App` and `Create New Pipeline`
+
 ![image](https://user-images.githubusercontent.com/78433013/172592073-19a8a831-551b-49b8-a18e-7b3019ec424c.png)
 
 Click on `Create New App`
 
 ### Step 3
 Now, you will be directed to a new page where you have to create your new heroku app
+
 ![image](https://user-images.githubusercontent.com/78433013/172592488-920384c1-d144-462d-acf2-75c35cbebab5.png)
 
 Enter the valid app name as per your choice, make sure you have entered a name relevant to the app and available on Heroku.
+
 ![image](https://user-images.githubusercontent.com/78433013/172592969-e4c810d5-8cf0-47e5-94a5-7fd442e523b8.png)
 
 Then click on `Create App`.
@@ -130,6 +142,7 @@ Wohoo!! you have successfully created your Heroku app, now you have to deploy th
 
 ### Step 4
 Now you will seeing your deploy section of the Heroku app as below.
+
 ![image](https://user-images.githubusercontent.com/78433013/172593891-762a00e6-b78d-44f1-b560-480229903a31.png)
 
 In the middle of the page, you will be able to see various deployment methods like Heroku Git or GitHub etc.
@@ -138,6 +151,7 @@ You can use either of them, mostly we use Heroku Git or GitHub one.
 If you select `Heroku Git`, there will be instructions given just below the options to execute in your Terminal/Command Line Interface
 
 Follow the instructions as per in the given order
+
 ![image](https://user-images.githubusercontent.com/78433013/172601479-d89232d7-2273-4148-8c69-e70e7569f15c.png)
 
 After you have run this command `git push heroku master`
@@ -150,9 +164,13 @@ Now Open Heroku and go to the settings in the app you created.
 ### Step 6
 You will find Configure Vars there. Click on `Reveal Config Vars`
 
+![config Cars](https://user-images.githubusercontent.com/76257739/172948484-1bc29df1-e9af-4970-9ade-05ffbde68555.png)
+
 ### Step 7
 Now you will find a box for Key, one box for Value and one Add button.
 Copy first key from your .env file into `KEY box` and copy its value(**Without apostrophee**) in `VALUE box` and click on Add button. For empty values leave the VALUE box empty and click Add button
+
+![keyval](https://user-images.githubusercontent.com/76257739/172948506-78a2dc23-2ae2-4c35-bdf4-77dc573ac460.png)
 
 ### Step 8
 Do Step 7 Repeatedly for all values of .env file but leave chaincode because that will be generated later on.
@@ -165,20 +183,26 @@ Now you will be linking your deployed service with us i.e. RDS.
 
 ### Step 1
 Go to [Real Dev Squad](https://www.realdevsquad.com/) website and click on `Sign In With GitHub` button in the navbar as shown below.
+
 ![image](https://user-images.githubusercontent.com/78433013/172817107-594451b4-eaeb-4997-8043-ece470218cbb.png)
+
 Link your GitHub account, and complete the `SignUp` steps.
 **Note** : Only for users who don't have an account on Real Dev Squad website or who haven't linked their GitHub account on Real Dev Squad website.
 
 ### Step 2
 Go to [My Site](https://my.realdevsquad.com/) or you can simply click the user greeting as shown below (this is after you have Signed In with your GitHub account)
-<!-- Upload Image Here -->
+
+![image](https://user-images.githubusercontent.com/76257739/172948639-0aaa2aa7-4238-4b70-90fd-3a7fd485a985.png)
+
 Once you landed on my-site, you will have to go to [Identity](https://my.realdevsquad.com/identity) Tab (P.S. you can directly click on this hyperlink to get you to the desired page).
 
 ### Step 3
 You get to see something like the below form
+
 ![image](https://user-images.githubusercontent.com/78433013/172821914-024038d6-d886-4463-9e25-c4882b671261.png)
 
 Click on `Generate Chaincode`, an alert will appear, click `OK` to generate the chaincode.
+
 ![image](https://user-images.githubusercontent.com/78433013/172822474-30441e6a-e0a8-4f9d-9e78-1edbb0906a3c.png)
 
 Click on `Copy` to copy the chaincode.
@@ -191,25 +215,37 @@ Now we have completed all the information.
 
 ### Step 5
 Run these commands in your terminal to push the code to your deployed service through the Heroku CLI
+
 ```git add .```
+
 ```git commit -am "<ENTER_YOUR_COMMIT_MESSAGE>"```
+
 ```git push heroku master ```
+
 If you were using the second method of `GitHub` to deploy your service
+
 ```git add .```
+
 ```git commit -am "<ENTER_YOUR_COMMIT_MESSAGE>"```
+
 If your branch name is `master` then use this
+
 ```git push origin master ```
+
 Otherwise,
+
 ```git push origin <ENTER_YOUR_BRANCH_NAME> ```
 
 ### Step 6
 Now that you have pushed your code with the chaincode. Enter your deployed service URL here.
+
 ![image](https://user-images.githubusercontent.com/78433013/172825385-a4e9000c-c4c2-4a43-a541-558098bad442.png)
 
 And click on `Save`.
 After that `Check` the checkbox to ensure that you have done both the steps correctly.
 Then, click on `Link Chaincode`. Woooh, now wait for few seconds or minutes to get your service verified by the Real Dev Squad service.
 Once you are verified you will get to see a verification message that your verification is completed.
+
 ![image](https://user-images.githubusercontent.com/78433013/172826282-140d4b22-ae5f-4f11-93cf-289b40deff73.png)
 
 Awesome, Congratulations 🥳 🎉 on becoming a user in Real Dev Squad and
