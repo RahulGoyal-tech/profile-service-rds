@@ -7,6 +7,7 @@ const getHealth = (_,res) => {
 const getProfile = (req,res) => {
     try{
         var token = req.headers.authorization;
+        if(!token){return res.status(401).send("Unauthorized Access, Hash Not Found")}
         var field = token.split(" ");
         const hash = field[1];
         if (bcrypt.compareSync(data.chain_code, hash)){}
