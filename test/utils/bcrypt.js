@@ -1,5 +1,5 @@
-const data = require('../../credentials/credentials');
 const bcrypt = require('bcrypt');
+const dotenv = require('dotenv').config();
 
 const rand = (strLen) => {
     var salt = '';
@@ -18,7 +18,7 @@ const getSalt = () => {
 
 const getHash = async () => {
     const cryptingToken = getSalt();
-    const hash = await bcrypt.hash(data.chain_code,cryptingToken);
+    const hash = await bcrypt.hash(process.env.CHAIN_CODE,cryptingToken);
     return hash;
 }
 
