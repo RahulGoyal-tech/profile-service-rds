@@ -3,10 +3,7 @@ const { expect } = chai;
 const chaiHttp = require("chai-http");
 
 const app = require('../index');
-
-const salt = {
-    salt:"$2b$10$X4T2iflikVYGsCmJxHP8Y."
-};
+const util = require('../test/utils/bcrypt');
 
 chai.use(chaiHttp);
 
@@ -28,11 +25,16 @@ describe("Profile Service", function () {
     });
 
     describe("GET /profile", function() {
+        var token = '';
+        beforeEach(async function () {
+            const hash = await util.getHash();
+            token = 'Bearer '.concat(hash);
+        });
         it("should return profile data", function(done) {
             chai
             .request(app)
             .get('/profile')
-            .set('Authorization', 'Bearer $2a$10$k6kFAvtqI/MCESxv3Mh9x.B9sVnyG5R4DSi3WcLrJZf1VObiZLcaO')
+            .set('Authorization', token)
             .end((err, res) => {
                 if (err) {
                     throw done(err);
@@ -58,6 +60,9 @@ describe("Profile Service", function () {
     });
 
     describe("POST /verification", function () {
+        const salt = {
+            salt: util.getSalt()
+        };
         it("should return a string containing hash based on salt", function(done) {
             chai
             .request(app)
