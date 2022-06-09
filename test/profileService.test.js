@@ -57,6 +57,35 @@ describe("Profile Service", function () {
                 return done();
             })
         });
+        it("should return 401 if hash not found", function(done) {
+            chai
+            .request(app)
+            .get('/profile')
+            .end((err, res) => {
+                if (err) {
+                    throw done(err);
+                }
+                
+                expect(res.status).to.equal(401);
+                expect(res.text).to.equal('Unauthorized Access, Hash Not Found');
+                return done();
+            })
+        });
+        it("should return 401 if invalid hash found", function(done) {
+            chai
+            .request(app)
+            .get('/profile')
+            .set('Authorization', 'Bearer InvalidHash')
+            .end((err, res) => {
+                if (err) {
+                    throw done(err);
+                }
+                
+                expect(res.status).to.equal(401);
+                expect(res.text).to.equal('Invalid Hash');
+                return done();
+            })
+        });
     });
 
     describe("POST /verification", function () {
