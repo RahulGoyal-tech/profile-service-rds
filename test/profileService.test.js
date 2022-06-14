@@ -28,7 +28,7 @@ describe("Profile Service", function () {
         var token = '';
         beforeEach(async function () {
             const hash = await util.getHash();
-            token = 'Bearer '.concat(hash);
+            token = `Bearer ${hash}`;
         });
         it("should return profile data", function(done) {
             chai
